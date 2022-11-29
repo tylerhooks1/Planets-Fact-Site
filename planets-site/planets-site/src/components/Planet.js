@@ -1,26 +1,45 @@
 import React from 'react';
-
+import MobileSubMenu from './MobileSubMenu';
+import PlanetRoutes from './PlanetRoutes';
 
 
 
 export default function Planet(props) {
     return (
         <>
-            {/**Mobile Menu */}
-
-            <div className='border-b-[1px] border-white/25 mb-24'>
-                <div className='container mx-auto px-5 py-2 flex justify-between uppercase opacity-25' style={{ fontSize: '9px' }}>
-                    <a href='#' className='hover:opactiy-100 focus:opacity-100'>overview</a>
-                    <p>structure</p>
-                    <p>Surface</p>
+            <MobileSubMenu />
+            <PlanetRoutes
+                name={props.name}
+                overviewContent={props.overviewContent}
+                overviewSource={props.overviewSource}
+                planetImg={props.planetImg}
+                structureContent={props.structureContent}
+                structureSource={props.structureSource}
+                internalImg={props.internalImg}
+                geologyContent={props.geologyContent}
+                geologySource={props.geologySource}
+                geologyImg={props.geologyImg}
+            />
+            <div className='container mx-auto px-6 grid grid-rows-4 gap-y-2 pb-8'>
+                <div className='border border-white/25 py-4 px-6 flex justify-between uppercase'>
+                    <p className='opacity-25 self-center'>Rotation Time</p>
+                    <h2 className='text-xl'>{props.rotation}</h2>
                 </div>
-            </div>
-            < div className='container mx-auto px-4' >
-                <img className='h-28 w-28 mx-auto mb-24' src={`${props.planetImg}`} alt="planet" />
-                <h2 className='text-center mb-4'>{props.name}</h2>
-                <p className='text-center mx-10 mb-8'>{props.overviewContent}</p>
+                <div className='border border-white/25 py-4 px-6 flex justify-between uppercase'>
+                    <p className='opacity-25 self-center'>Revolution Time</p>
+                    <h2 className='text-xl'>{props.revolution}</h2>
+                </div>
+                <div className='border border-white/25 py-4 px-6 flex justify-between uppercase'>
+                    <p className='opacity-25 self-center'>Radius</p>
+                    <h2 className='text-xl'>{props.radius}</h2>
+                </div>
+                <div className='border border-white/25 py-4 px-6 flex justify-between uppercase'>
+                    <p className='opacity-25 self-center'>Average Temp.</p>
+                    <h2 className='text-xl'>{props.temperature}</h2>
+                </div>
 
             </div>
+
         </>
 
     )

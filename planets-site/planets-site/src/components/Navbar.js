@@ -19,7 +19,7 @@ export default function Navbar() {
                 <div className='container mx-auto px-4 py-4  md:px-0 md:py-8'>
                     <div className='flex justify-between md:max-lg:justify-center md:max-lg:flex-wrap md:max-lg:grid md:max-lg:grid-rows-1  '>
                         <h2 className='text-2xl tracking-wide md:text-center md:mb-8 lg:mb-0'>The Planets</h2>
-                        <button onClick={toggle} className=''>
+                        <button onClick={toggle} >
                             {state ?
                                 <img src={menuIcon} alt="menu" id="menuIcon" className='max-h-4 max-w-sm self-center block md:hidden fill-white transition-all ease-in-out' />
                                 :

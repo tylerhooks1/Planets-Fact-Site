@@ -1,9 +1,8 @@
 import './index.css';
 import { Routes, Route } from 'react-router-dom';
 import Planets from './data.json';
-import Home from './components/Home'
-import Navbar from './components/Navbar'
-import Planet from './components/Planet'
+import Navbar from './components/Navbar';
+import Planet from './components/Planet';
 
 
 
@@ -18,7 +17,7 @@ function App() {
           {Planets.map((data, key) => {
             return (
               <Route
-                path={`${data.name}`}
+                path={`${data.name}/*`}
                 key={`${data.name}`}
                 element={
                   <Planet
