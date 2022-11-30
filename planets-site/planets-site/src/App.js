@@ -10,7 +10,7 @@ import Planet from './components/Planet';
 function App() {
   return (
     <>
-      <body className="text-white bg-midnight bg-[url('assets/background-stars.svg')] scroll-smooth">
+      <body className="text-white bg-cover bg-repeat bg-midnight bg-[url('assets/background-stars.svg')] scroll-smooth">
         <Navbar />
         <Routes>
           <Route path="/" element={<Planet />} />
