@@ -15,7 +15,7 @@ export default function Navbar() {
 
     return (
         <>
-            <div className='border-b-[1px] border-white/25'>
+            <div className='border-b-[1px] border-white/25 lg:px-8'>
                 <div className='container mx-auto px-4 py-4  md:px-0 md:py-8'>
                     <div className='flex justify-between md:max-lg:justify-center md:max-lg:flex-wrap md:max-lg:grid md:max-lg:grid-rows-1  '>
                         <h2 className='text-2xl tracking-wide md:text-center md:mb-8 lg:mb-0'>The Planets</h2>
@@ -28,7 +28,7 @@ export default function Navbar() {
                         </button>
                         <div className='hidden md:block'>
                             {Planets.map((data, key) => {
-                                return (<Link to={`${data.name}`} key={key} ><h4 className='inline-block ml-3 md:ml-8 opacity-75'>{data.name}</h4></Link>)
+                                return (<Link to={`${data.name}`} key={key} className="ml-3 md:ml-8"><h4 className='inline-block  opacity-75'>{data.name}</h4></Link>)
                             })}
                         </div>
                     </div>

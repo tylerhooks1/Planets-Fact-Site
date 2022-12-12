@@ -3,17 +3,18 @@ import { Routes, Route } from 'react-router-dom';
 import Planets from './data.json';
 import Navbar from './components/Navbar';
 import Planet from './components/Planet';
-
+import Home from './components/Home'
 
 
 
 function App() {
   return (
     <>
-      <body className="text-white bg-cover bg-repeat bg-midnight bg-[url('assets/background-stars.svg')] scroll-smooth">
+      <body className="text-white bg-cover bg-repeat bg-midnight bg-[url('assets/background-stars.svg')] min-h-screen scroll-smooth">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Planet />} />
+          <Route path="/" element={<Home />}
+          />
           {Planets.map((data, key) => {
             return (
               <Route
@@ -35,10 +36,12 @@ function App() {
                     planetImg={data.images.planet}
                     internalImg={data.images.internal}
                     geologyImg={data.images.geology}
+                    color={data.color}
                   />
                 }
               />
             )
+
           })}
         </Routes>
       </body>
